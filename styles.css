@@ -87,6 +87,14 @@ body {
   font-weight: 500;
 }
 
+a {
+  color: inherit;
+  text-decoration: underline;
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .plain-list {
   display: flex;
   flex-direction: column;
