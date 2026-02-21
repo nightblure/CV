@@ -1,106 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Resume</title>
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<div class="page">
+  <div class="page">
 
-  <header class="header">
-    <h1>Ivan Belyaev</h1>
-    <h2>Backend Developer</h2>
+    <header class="header">
+      <h1>Ivan Belyaev</h1>
+      <h2>Backend Developer</h2>
 
-    <p class="meta">GMT+3, Russian Federation</p>
-    <a class="email" href="mailto:vanobel159@gmail.com">vanobel159@gmail.com</a>
-  </header>
+      <p class="meta">GMT+3, Russian Federation</p>
+      <a class="email" href="mailto:vanobel159@gmail.com">vanobel159@gmail.com</a>
+    </header>
 
-  <div class="layout">
+    <div class="layout">
 
-    <aside class="sidebar">
+      <aside class="sidebar">
 
-      <section>
-        <h3>Links</h3>
-        <div class="links">
-          <a href="https://github.com/username" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
-          <a href="https://t.me/username" target="_blank">Telegram</a>
-        </div>
-      </section>
+        <section>
+          <h3>Links</h3>
+          <div class="links">
+            <a href="https://github.com/nightblure" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+            <a href="https://t.me/nightblure" target="_blank">Telegram</a>
+          </div>
+        </section>
 
-      <section>
-        <h3>Skills</h3>
-        <div class="plain-list">
-          <span>Python</span>
-          <span>FastAPI, Flask</span>
-          <span>Docker</span>
-          <span>Kubernetes</span>
-          <span>PostgreSQL</span>
-          <span>Redis</span>
-          <span>ClickHouse</span>
-          <span>Kafka</span>
-        </div>
-      </section>
+        <section>
+          <h3>Skills</h3>
+          <div class="plain-list">
+            <span>Python</span>
+            <span>FastAPI, Flask</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>GitLab CI, GitHub Actions</span>
+            <span>PostgreSQL</span>
+            <span>Redis, S3</span>
+            <span>Clickhouse</span>
+            <span>Milvus</span>
+            <span>SQLAlchemy</span>
+            <span>Apache Kafka</span>
+            <span>pytest, Testcontainers</span>
+            <span>Grafana, PromQL, Splunk</span>
+            <span>Dependency injector</span>
+            <span>Hatch, mypy, Ruff</span>
+          </div>
+        </section>
 
-      <section>
-        <h3>Languages</h3>
-        <div class="plain-list">
-          <span>Russian — Native</span>
-          <span>English — B1</span>
-        </div>
-      </section>
+        <section>
+          <h3>Languages</h3>
+          <div class="plain-list">
+            <span>Russian — Native</span>
+            <span>English — B1</span>
+          </div>
+        </section>
 
-    </aside>
+        <section>
+          <h3>Hobbies</h3>
+          <div class="plain-list">
+            <span>
+              In my free time I write atmospheric electronic music and have thousands of listeners on various streaming
+              services like Spotify, Apple Music and etc.
+            </span>
+          </div>
+        </section>
 
-    <main class="content">
+      </aside>
 
-      <section class="profile">
-        <h3>Profile</h3>
-        <p>
-          Backend developer with 5 years of experience in BI,
-          cloud client services and ML backend.
-        </p>
-      </section>
+      <main class="content">
 
-      <section>
-        <h3>Experience</h3>
+        <section class="profile">
+          <h3>Profile</h3>
+          <p>
+            Backend developer with 5.5 years of development experience with domain expertise in product development (BI,
+            cloud client services, backend for ML).
+            <br>
+            I also understand fresh tooling in Python ecosystem, developing
+            <a href="https://github.com/nightblure/injection\">my framework for dependency injection</a>,
+            and I have contributions to some other projects.
+            More details at my <a href="https://github.com/nightblure\">GitHub profile</a>
+          </p>
+        </section>
 
-        <div class="experience-list">
+        <section>
+          <h3>Experience</h3>
 
-          <article class="exp">
-            <div class="exp-head">
-              <strong>Backend Engineer — Okko</strong>
-              <span>Mar 2025 — Present</span>
-            </div>
-            <p>A/B experiments platform for analysts and PMs.</p>
-          </article>
+          <div class="experience-list">
 
-          <article class="exp">
-            <div class="exp-head">
-              <strong>Backend Developer — Ailet</strong>
-              <span>Oct 2023 — Feb 2025</span>
-            </div>
-            <ul>
-              <li>Improved ML pipeline</li>
-              <li>Vector search with Milvus</li>
-            </ul>
-          </article>
+            <article class="exp">
+              <div class="exp-head">
+                <strong>Backend Engineer — Okko, Moscow (Remote)</strong>
+              </div>
 
-        </div>
-      </section>
+              <p>Mar 2025 — Present</p>
 
-    </main>
+              <p>
+                The A/B experiments platform is an internal product used by data analysts and product managers.
+                Using the platform, our clients can manage hundreds of A/B experiments and test product hypotheses which
+                impact the whole Okko.
+                The platform consists of 2 large components: the admin panel and a high-load service that performs
+                traffic splitting (often 3-10K RPS).
+                Our team contribute in supporting and developing both of these components.
 
+                <a href="https://habr.com/ru/companies/okko/articles/894462/" target="_blank">
+                  More about the platform on Habr.
+                </a>
+              </p>
+            </article>
+
+            <article class="exp">
+              <div class="exp-head">
+                <strong>Backend developer for the Core team — Ailet, Moscow (Remote)</strong>
+              </div>
+
+              <p>Oct 2023 — Feb 2025</p>
+
+              <ul>
+                <li>the neural network training management service was enhanced to include the ability to train on
+                  rented graphics cards.
+                  This reduced training on different types of neural networks multiple times (more than 2300 experiments
+                  were successfully succeeded);
+                </li>
+
+                <li>
+                  a search for similar facings was launched using the Milvus vector database.
+                  This enabled us to improve search accuracy, eliminate inefficient infrastructure, and reuse another
+                  team's capability for photo deduplication;
+                </li>
+
+                <li>
+                  legacy import master product data has been completely rewritten to fit many new business requirements.
+                  It helps data analysts to load thousands of products and classes in minutes;
+                </li>
+
+                <li>under the leadership of the CTO, performed a presentation on domain-driven design:
+                  <a href="https://nightblure.github.io/ddd-ailet/1\">https://nightblure.github.io/ddd-ailet/1</a>;
+                </li>
+
+                <li>contributed to the opensource package \"testcontainers\", the Milvus vector database container for
+                  writing integration tests;
+                </li>
+
+                <li>carried out integration tests with \"testcontainers\" for 4 services;</li>
+
+                <li>improved code coverage by a total of 124% for 2 services with unit and integration tests;</li>
+
+                <li>completely redesigned the CI pipelines for five services: jobs for static analysis were implemented,
+                  all failed jobs were fixed, \"uv\" package manager has been set up;
+                </li>
+
+                <li>implemented for 4 services the use of a dependency injector to reduce the coupling of components in
+                  the code and facilitate mocking in tests.
+
+                </li>
+              </ul>
+            </article>
+
+            <article class="exp">
+              <div class="exp-head">
+                <strong>Backend Developer of a team of client and internal services — Selectel, Saint Petersburg
+                  (Office)</strong>
+              </div>
+
+              <p>April 2023 — Sep 2023</p>
+
+              <p>
+
+              <ul>
+                <li>maintained a system for uploading logs for and implemented a client library;</li>
+
+                <li>implemented a backend in the ticket system for the employee comments section with many filters,
+                  thanks to which support managers will be able to evaluate their subordinates much faster and more
+                  efficiently and decide on their bonuses;
+                </li>
+
+                <li>optimized the integration of the client service with AmoCRM.
+                  Now employees will be able to change the manager for clients in AmoCRM several times faster.
+                </li>
+              </ul>
+              </p>
+            </article>
+
+            <article class="exp">
+              <div class="exp-head">
+                <strong>Backend and BI Developer — Smart Analytics, Perm (Remote)"</strong>
+              </div>
+
+              <p>April 2020 — April 2023</p>
+
+              <p>
+              <ul>
+                <li>
+                  implemented the export of dashboards to Excel for Apache Superset fork;
+                </li>
+
+                <li>
+                  set up integrated domain user authorization in the system for Rosenergoatom.
+                  Users can now be authorized in the system by pressing just a single button;
+                </li>
+
+                <li>studied and modified the legacy code of the document loader for Zarubezhneft.
+                  I was able to painlessly implement the logic of processing several types of documents into the loader,
+                  which positively affects the development process;
+                </li>
+
+                <li>created assemblies that included a lot of boilerplate BI code, which used in every project and
+                  reduced the number of bugs, typical errors, and development time.
+                </li>
+              </ul>
+              </p>
+            </article>
+
+          </div>
+        </section>
+
+        <section>
+          <h3>Education</h3>
+          <div class="experience-list">
+            <article class="exp">
+              <div class="exp-head">
+                <strong>Bachelor, National Research Polytechnic University, Perm</strong>
+              </div>
+              <p><span>2015 — 2019</span></p>
+              <p>
+                Faculty of Applied Mathematics and Mechanics, Information systems and technologies
+              </p>
+            </article>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
   </div>
-</div>
 
 </body>
+
 </html>
