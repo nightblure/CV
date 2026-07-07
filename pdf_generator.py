@@ -17,8 +17,8 @@ with sync_playwright() as p:
 
         page.pdf(
             path=str(pdf_path),
-            format="A4",
             print_background=True,
+            prefer_css_page_size=True,
             scale=0.95
         )
     finally:

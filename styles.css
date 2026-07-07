@@ -184,41 +184,57 @@ a {
 }
 
 @media print {
-
-  /* убираем двойной верх */
+  /* Убираем внешние отступы */
   .page {
-    margin-top: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
   }
 
-  /* шире правую колонку */
+  /* Переходим на Flexbox */
   .layout {
-    grid-template-columns: 0.65fr 2.35fr;
+    display: flex !important;
+    flex-direction: row !important;
     gap: 40px;
+    width: 100%;
   }
 
-  /* не рвать блоки */
+  .sidebar {
+    width: 25%;
+    flex-shrink: 0;
+  }
+
+  .content {
+    width: 75%;
+    flex-grow: 1;
+  }
+
+  /* Разрешаем элементам плавно рваться */
   .header,
-  .sidebar,
-  .content section,
-  .exp {
+  .sidebar section {
     break-inside: avoid;
   }
-}
 
-/* MOBILE */
-
-@media (max-width: 760px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .content section {
+    break-inside: auto !important;
   }
 
+  /* ИСПРАВЛЕНИЕ: Разрешаем длинным вакансиям рваться между страницами */
+  .exp {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* ИСПРАВЛЕНИЕ: Запрещаем отрывать заголовок вакансии от её текста */
   .exp-head {
-    grid-template-columns: 1fr;
-    row-gap: 4px;
+    break-after: avoid !important;
+    page-break-after: avoid !important;
   }
 
-  .exp-head span {
-    text-align: left;
+  /* ИСПРАВЛЕНИЕ: Запрещаем разрывать отдельные элементы списка <li> пополам */
+  .exp ul li {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 }
+
